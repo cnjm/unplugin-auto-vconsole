@@ -1,1 +1,2 @@
-document.getElementById('app')!.innerHTML = '__UNPLUGIN__'
+import dayjs from "dayjs";
+console.log(dayjs.locale());
