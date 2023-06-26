@@ -27,7 +27,7 @@ export default createUnplugin((options: Options) => {
       let value = res ? res[2] : null;
       return value;
     }
-    if (unpluginQuery(${field})) {
+    if (unpluginQuery("${field}")) {
       const { default: Vconsole } = await import("vconsole");
       ${newStr}
     }
