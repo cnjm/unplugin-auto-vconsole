@@ -58,7 +58,7 @@ export default defineConfig({
     unpluginVconsole({
       field: "enable_console",
       isBuild: command === "build",
-      entry: "src/main.ts",
+      entry: resolve("src/main.ts"),
       enabled: vconsoleEnabled(),
       config: { theme: "dark" },
     }),
@@ -81,7 +81,7 @@ export default {
   plugins: [
     unpluginVconsole({
       isBuild: command === "build",
-      entry: "src/main.ts",
+      entry: resolve("src/main.ts"),
     }),
   ],
 };
@@ -99,7 +99,7 @@ module.exports = {
   plugins: [
     require("unplugin-auto-vconsole/webpack")({
       isBuild: command === "build",
-      entry: "src/main.js",
+      entry: resolve("src/main.js"),
     }),
   ],
 };
@@ -118,7 +118,7 @@ export default {
       "unplugin-auto-vconsole/nuxt",
       {
         isBuild: command === "build",
-        entry: "src/main.js",
+        entry: resolve("src/main.js"),
       },
     ],
   ],
@@ -139,7 +139,7 @@ module.exports = {
     plugins: [
       require("unplugin-auto-vconsole/webpack")({
         isBuild: command === "build",
-        entry: "src/main.js",
+        entry: resolve("src/main.js"),
       }),
     ],
   },
